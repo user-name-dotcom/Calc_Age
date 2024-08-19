@@ -1,0 +1,140 @@
+body {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.field {
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.legend {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.user {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.user:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: rgb(254, 254, 254);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.result {
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.result.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 1px;
+    width: 100%;
+    color: black;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .field {
+        padding: 20px;
+    }
+
+    .user,
+    .button {
+        max-width: 100%;
+    }
+}
+
+/* إضافة الخلفية المتحركة */
+
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}

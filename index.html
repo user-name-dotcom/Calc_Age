@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Test</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
+    <script defer src="main.js"></script>
+    <style>
+      .result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+      }
+      .shake {
+        animation: shake 0.8s;
+      }
+      @keyframes shake {
+        0% { transform: translate(0); }
+        25% { transform: translate(-5px); }
+        50% { transform: translate(5px); }
+        75% { transform: translate(-5px); }
+        100% { transform: translate(0); }
+      }
+    </style>
+  </head>
+  <body>
+    
+ 
+    <fieldset class="field">
+      <legend class="legend">Calculate Your Age</legend>
+      <div class="container">
+        <input
+          required
+          class="user"
+          id="year"
+          type="number"
+          placeholder="Enter Birth Year (e.g. 2005)"
+        />
+        <input
+          required
+          class="user"
+          id="month"
+          type="number"
+          placeholder="Enter Birth Month (1-12)"
+        />
+        <input
+          required
+          class="user"
+          id="day"
+          type="number"
+          placeholder="Enter Birth Day (1-31)"
+        />
+        <div>
+          <button name="inp" class="button" id="calculateBtn">Calculate</button>
+        </div>
+      </div>
+      <div class="result" id="result"></div>
+    </fieldset>
+
+    <footer>
+      &copy; Created By `Ahmed Magdy`
+    </footer>
+
+    <script src="main"></script>
+  </body>
+</html>
